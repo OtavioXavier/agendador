@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Diretórios do sistema
+.DS_Store
+Thumbs.db
+
+# Dependências instaladas
+node_modules/
+# Diretórios de build/output
+dist/
+build/
+
+# Cache e transpilações
+*.tsbuildinfo
+
+# Ambiente local e variáveis sensíveis
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# TypeScript
+*.d.ts
+# Arquivos de configuração de TypeScript
+tsconfig.tsbuildinfo
+
+# Coverage (se você adicionar testes futuramente)
+coverage/
+
+# IDEs e editores de texto
+.vscode/
+.idea/
+*.swp
+
+# Sistema operacional
+*.bak
+*.tmp
