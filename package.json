@@ -3,25 +3,25 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn src/server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "dependencies": {
+    "@types/uuid": "^10.0.0",
+    "agendador": "file:",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "pg-promise": "^11.9.1",
+    "uuid": "^10.0.0"
+  },
   "devDependencies": {
     "@types/express": "^5.0.0",
-    "@types/mongoose": "^5.11.96",
-    "@types/node": "^22.7.2",
-    "add": "^2.0.6",
-    "dotenv": "^16.4.5",
-    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.6.2"
-  },
-  "dependencies": {
-    "express": "^4.21.0",
-    "mongoose": "^8.6.3"
   }
 }

@@ -1,19 +1,16 @@
-import express from "express";
-import type { Express } from "express";
-import 'dotenv/config'
-import { router } from "./routes/routes";
-import { startDB } from "./database/mongo-cnnct";
+import express from 'express'
 
-const PORT: string = process.env.PORT || '3000';
+import { Router } from 'express';
+import routerMessage from './routes/message.routes';
 
-const app: Express = express();
+const app = express();
 
-app.use(express.json());
-app.use(router);
+const route = Router()
 
-startDB();
+app.use(express.json())
 
+app.use(route);
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-})
+app.use("/api", routerMessage)
+
+app.listen(3333, () => 'server running on port 3333');
